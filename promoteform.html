@@ -12,7 +12,7 @@
   <!-- AOS for scroll animations -->
   <link href="assets/Bootsrtrap/aos.css" rel="stylesheet">
   <!-- header link -->
-<script src="assets/JS/layout.js"></script>
+  <script src="assets/JS/layout.js"></script>
 
   <style>
     :root{
@@ -88,6 +88,22 @@
       object-fit: cover;
       animation: float-up-down 4s ease-in-out infinite alternate;
     }
+
+    /* Purple OK Button for Modal */
+    .btn-purple {
+      background-color: var(--deep); /* #7b4397 */
+      color: white;
+      font-weight: 600;
+      border-radius: 40px;
+      border: none;
+      padding: 0.5rem 1.5rem;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn-purple:hover {
+      background-color: #9b59b6;
+      color: white;
+    }
   </style>
 </head>
 <body class="registration-bg">
@@ -158,10 +174,37 @@
   </div>
 </section>
 
+<!-- Submission Modal -->
+<div class="modal fade" id="submitModal" tabindex="-1" aria-labelledby="submitModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-body text-center py-4">
+        <h5 class="modal-title mb-3" id="submitModalLabel">Thank you for registering your brand!</h5>
+        <button type="button" class="btn btn-purple px-4" data-bs-dismiss="modal">OK</button>
+      </div>
+    </div>
+  </div>
+</div>
 
-  <!-- Bootstrap JS + AOS -->
-  <script src="assets/Bootsrtrap/bootstrap.min.js"></script>
-  <script src="assets/Bootsrtrap/aos.js"></script>
-  <script> AOS.init({ duration: 700, once: true }); </script>
+<!-- Bootstrap JS + AOS -->
+<script src="assets/Bootsrtrap/bootstrap.min.js"></script>
+<script src="assets/Bootsrtrap/aos.js"></script>
+<script> AOS.init({ duration: 700, once: true }); </script>
+
+<script>
+  const form = document.querySelector('form');
+  const submitModal = new bootstrap.Modal(document.getElementById('submitModal'));
+
+  form.addEventListener('submit', function(event) {
+    event.preventDefault(); // Rok do default form submit ko (demo ke liye)
+    // Yahan backend call ya ajax bhi kar sakte hain
+
+    submitModal.show(); // Modal dikhayein
+
+    // Optional: form reset karna ho to uncomment karen:
+    // form.reset();
+  });
+</script>
+
 </body>
 </html>

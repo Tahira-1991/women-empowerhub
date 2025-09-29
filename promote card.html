@@ -5,13 +5,13 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Women Empower — Promote</title>
 
-    <!-- Bootstrap CSS -->
+ <!-- Bootstrap CSS -->
   <link href="assets/Bootsrtrap/bootstrap.min.css" rel="stylesheet">
   <!-- Bootstrap icons -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
   <!-- AOS for scroll animations -->
   <link href="assets/Bootsrtrap/aos.css" rel="stylesheet">
-  <!-- header link -->
+<!-- header link -->
 <script src="assets/JS/layout.js"></script>
 
   <style>
@@ -30,13 +30,11 @@
      .hero-gradient{
       background: linear-gradient(135deg, var(--lavender) 0%, var(--blush) 55%, #fff 100%);
     }
-    .btn-gold{background: var(--gold); color:#3a2f22; font-weight:600;}
+    .btn-gold{background: var(--gold); color:#3a2f22; font-weight:600; border-radius: 40px;}
     .course-card:hover{transform: translateY(-5px); box-shadow:0 8px 20px rgba(0,0,0,0.1);}
     .course-card{transition: .3s;}
     .bg-lavender{background: var(--lavender);}
     .bg-blush{background: var(--blush);}
-    .gold-text{-webkit-text-fill-color:var(--gold) ;}
-
     .business-card {
       border: 1px solid rgba(0,0,0,0.08);
       border-radius: 12px;
@@ -47,18 +45,68 @@
     .form-select, .form-control {
       border-radius: 8px;
     }
-.form-select:focus {
-  border-color: var(--gold) !important;       /* gold border */
-  box-shadow: 0 0 0 0.25rem rgba(255, 204, 112, 0.25) !important; /* soft gold glow */
-}
-   .form-control:focus {
-  border-color: var(--gold) !important;       /* gold border */
-  box-shadow: 0 0 0 0.25rem rgba(255, 204, 112, 0.25) !important; /* soft gold glow */
-} 
+    /* Updated hover and focus styles for purple effect */
+    .form-select:focus, .form-control:focus {
+      border-color: #9b59b6;
+      box-shadow: 0 0 0 0.25rem rgba(155, 89, 182, 0.4);
+    }
+    .form-select:hover, .form-control:hover {
+      border-color: #9b59b6;
+    }
+    .input-group .btn-primary {
+      background-color: var(--deep);
+      border-color: var(--deep);
+      transition: background-color 0.3s, border-color 0.3s;
+    }
+    .input-group .btn-primary:hover {
+      background-color: #9b59b6;
+      border-color: #9b59b6;
+    }
+    .view-profile-btn {
+      color: var(--deep);
+      border-color: var(--deep);
+      transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+    }
+    .view-profile-btn:hover {
+      background-color: #9b59b6;
+      color: #fff;
+      border-color: #9b59b6;
+    }
   </style>
 </head>
 <body class="bg-light">
   
+  <!-- nav  -->
+<nav class="navbar navbar-expand-lg bg-white shadow-sm py-2 sticky-top">
+  <div class="container">
+    <a class="navbar-brand d-flex align-items-center" href="index.html">
+      <div class="rounded-3 d-flex align-items-center justify-content-center me-2"
+          style="width:40px;height:40px;background:linear-gradient(135deg,#D6A4E6,#FADADD);color:#fff;font-weight:700">
+        WE
+      </div>
+      <div class="pt-2">
+        <div class="fw-bold">Women Empower Hub</div>
+        <small class="text-muted" style="font-size:12px; position: relative; top: -10px;">Learn • Promote • Grow</small>
+      </div>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="mainNav">
+      <ul class="navbar-nav ms-auto align-items-lg-center">
+        <li class="nav-item"><a class="nav-link" href="learn.html">Learn</a></li>
+        <li class="nav-item"><a class="nav-link active" href="promote.html">Promote</a></li>
+        <li class="nav-item"><a class="nav-link" href="mentors.html">Mentors</a></li>
+        <li class="nav-item"><a class="nav-link" href="stories.html">Stories</a></li>
+        <li class="nav-item ms-lg-3">
+          <a class="btn text-white px-3" style="background:linear-gradient(90deg,#D6A4E6,#FADADD)" href="#">
+            Join Now
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
 
 <!-- Hero Section -->
 <header class="text-center py-5 bg-blush" style="background-color:#d8a8eba2;">
@@ -86,7 +134,7 @@
           <div class="mb-3">
             <label for="categoryFilter" class="form-label text-muted small mb-1">Category</label>
             <select class="form-select" id="categoryFilter">
-              <option selected>All Categories</option>
+              <option value="all" selected>All Categories</option>
               <option value="fashion">Fashion & Apparel</option>
               <option value="food">Food & Beverage</option>
               <option value="handicrafts">Handicrafts & Arts</option>
@@ -98,105 +146,80 @@
           <div class="mb-3">
             <label for="locationFilter" class="form-label text-muted small mb-1">Location</label>
             <select class="form-select" id="locationFilter">
-              <option selected>All Locations</option>
+              <option value="all" selected>All Locations</option>
               <option value="lahore">Lahore, Pakistan</option>
               <option value="karachi">Karachi, Pakistan</option>
               <option value="islamabad">Islamabad, Pakistan</option>
             </select>
           </div>
-          
+          <!-- RATING FILTER -->
+          <div class="mb-3">
+            <label for="ratingFilter" class="form-label text-muted small mb-1">Minimum Rating</label>
+            <select class="form-select" id="ratingFilter">
+              <option value="0" selected>Any Rating</option>
+              <option value="4.5">4.5 Stars & Up</option>
+              <option value="4">4.0 Stars & Up</option>
+              <option value="3.5">3.5 Stars & Up</option>
+            </select>
+          </div>
+        </div>
+        <div class="mt-4 text-center d-none" id="no-results-message">
+          <i class="bi bi-info-circle-fill me-2"></i>No businesses found matching your criteria.
         </div>
       </div>
       <!-- Cards -->
       <div class="col-lg-9">
         <!-- search -->
-        <div class="row justify-content-centr">
-          <div class="mb-4 col-lg-9">
+        <div class="row justify-content-center">
+          <div class="mb-4 col-lg-9" data-aos="fade-left">
             <label for="searchBar" class="form-label text-muted small mb-1">Search Keyword</label>
             <div class="input-group">
-              <input type="text" class="form-control p-2" placeholder="Search...">
-              <button class="btn btn-gold" type="button"><i class="bi bi-search"></i></button>
+              <input type="text" class="form-control p-2" id="searchBar" placeholder="Search...">
+              <button class="btn btn-primary" type="button"><i class="bi bi-search"></i></button>
             </div>
           </div>
         </div>
-        <div class="row g-4">
-          <div class="col-md-6 col-xl-4 business-item" data-category="fashion" data-location="lahore" data-aos="fade-up">
-            <div class="card business-card h-100 shadow-sm">
-              <img src="assets/img/stitch.png" class="card-img-top object-fit-cover" alt="Fashion brand" style="height:200px">
-              <div class="card-body">
-                <h5 class="card-title fw-semibold">The Stitch Studio</h5>
-                <p class="card-text text-muted small">Handcrafted bespoke clothing & accessories.
-                  <br><i class="bi bi-geo-alt-fill me-1 text-danger"></i>Lahore, Pakistan
-                </p>
-                <a href="#" class="btn btn-gold btn-sm mt-2">View Profile</a>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 col-xl-4 business-item" data-category="food" data-location="karachi" data-aos="fade-up" data-aos-delay="100">
-            <div class="card business-card h-100 shadow-sm">
-            <img src="assets/img/aunt-kitchen.jpg" class="card-img-top object-fit-cover" alt="Bakery" style="height:200px">
-              <div class="card-body">
-                <h5 class="card-title fw-semibold">Auntie's Kitchen</h5>
-                <p class="card-text text-muted small">Delicious baked goods and custom cakes for all occasions.
-                  <br><i class="bi bi-geo-alt-fill me-1 text-danger"></i>Karachi, Pakistan
-                </p>
-                <a href="#" class="btn btn-gold btn-sm mt-2">View Profile</a>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 col-xl-4 business-item" data-category="handicrafts" data-location="islamabad" data-aos="fade-up" data-aos-delay="200">
-            <div class="card business-card h-100 shadow-sm">
-              <img src="assets/img/jewllery1.jfif" class="card-img-top object-fit-cover" alt="Jewelry brand" style="height:200px">
-              <div class="card-body">
-                <h5 class="card-title fw-semibold">Gemstone Jewels</h5>
-                <p class="card-text text-muted small">Elegant handmade jewelry and accessories.
-                  <br><i class="bi bi-geo-alt-fill me-1 text-danger"></i>Islamabad, Pakistan
-                </p>
-                <a href="#" class="btn btn-gold btn-sm mt-2">View Profile</a>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 col-xl-4 business-item" data-category="handicrafts" data-location="lahore" data-aos="fade-up">
-            <div class="card business-card h-100 shadow-sm">
-            <img src="assets/img/art.png" class="card-img-top object-fit-cover" alt="Art Supplies" style="height:200px">
-              <div class="card-body">
-                <h5 class="card-title fw-semibold">Artisan's Palette</h5>
-                <p class="card-text text-muted small">Hand-picked art supplies for creators of all levels.
-                  <br><i class="bi bi-geo-alt-fill me-1 text-danger"></i>Lahore, Pakistan
-                </p>
-                <a href="#" class="btn btn-gold btn-sm mt-2">View Profile</a>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 col-xl-4 business-item" data-category="beauty" data-location="karachi" data-aos="fade-up" data-aos-delay="100">
-            <div class="card business-card h-100 shadow-sm">
-               <img src="assets/img/skincare.png" class="card-img-top object-fit-cover" alt="Skincare" style="height:200px">
-              <div class="card-body">
-                <h5 class="card-title fw-semibold">Saffron Glow</h5>
-                <p class="card-text text-muted small">Organic and natural skincare products for radiant skin.
-                  <br><i class="bi bi-geo-alt-fill me-1 text-danger"></i>Karachi, Pakistan
-                </p>
-                <a href="#" class="btn btn-gold btn-sm mt-2">View Profile</a>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 col-xl-4 business-item" data-category="services" data-location="islamabad" data-aos="fade-up" data-aos-delay="200">
-            <div class="card business-card h-100 shadow-sm">
-                <img src="assets/img/counciling.png" class="card-img-top object-fit-cover" alt="Consulting" style="height:200px">
-              <div class="card-body">
-                <h5 class="card-title fw-semibold">Nexus Consulting</h5>
-                <p class="card-text text-muted small">Professional business consulting for startups and SMEs.
-                  <br><i class="bi bi-geo-alt-fill me-1 text-danger"></i>Islamabad, Pakistan
-                </p>
-                <a href="#" class="btn btn-gold btn-sm mt-2">View Profile</a>
-              </div>
-            </div>
-          </div>
+        <div class="row g-4" id="business-list">
+          <!-- Business cards will be dynamically inserted here by JavaScript -->
         </div>
       </div>
     </div>
   </div>
 </section>
+
+<!-- Profile Modal -->
+<div class="modal fade" id="profileModal" tabindex="-1" aria-labelledby="profileModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content border-0 rounded-4 shadow-lg">
+      <div class="modal-body p-0 rounded-4 overflow-hidden">
+        <button type="button" class="btn-close position-absolute top-0 end-0 m-3 z-1" data-bs-dismiss="modal" aria-label="Close"></button>
+        <div class="position-relative">
+          <img id="profile-image" class="img-fluid" style="width: 100%; height: 250px; object-fit: cover;" alt="Business Image">
+          <div class="position-absolute bottom-0 start-0 p-4 w-100" style="background: linear-gradient(to top, rgba(0,0,0,0.7), rgba(0,0,0,0));">
+            <h3 id="profile-name" class="text-white fw-bold mb-0"></h3>
+            <div id="profile-rating" class="d-flex align-items-center mt-1"></div>
+          </div>
+        </div>
+        <div class="p-4">
+          <div class="mb-4">
+            <p id="profile-description" class="lead text-muted"></p>
+          </div>
+          <div class="mb-4">
+            <h6 class="fw-bold grad-text">About the Founder</h6>
+            <p id="profile-bio" class="text-muted small"></p>
+          </div>
+          <div class="mb-4">
+            <h6 class="fw-bold grad-text">Our Mission</h6>
+            <p id="profile-mission" class="text-muted small"></p>
+          </div>
+          <div class="text-center">
+            <a id="profile-contact" class="btn btn-gold btn-lg rounded-pill px-4" href="#" target="_blank"><i class="bi bi-link-45deg me-2"></i>View Website</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
 <!-- Call for action -->
 <section class="container text-center py-5">
@@ -207,9 +230,318 @@
   <a href="#" class="btn btn-gold px-4 py-2" data-aos="zoom-in">Get Started</a>
 </section>
 
+<!-- Footer -->
+<footer class="bg-lavender border-top py-4" style="background-color:#d8a8eba2;">
+  <div class="container">
+    <div class="row gy-3">
+      <div class="col-md-4">
+        <h6 class="fw-bold">WomenEmpower</h6>
+        <p class="text-muted small">Learn • Promote • Grow</p>
+      </div>
+      <div class="col-md-4">
+        <h6 class="fw-bold">Quick Links</h6>
+        <ul class="list-unstyled small">
+          <li><a href="learn.html" class="text-muted">Learn</a></li>
+          <li><a href="promote.html" class="text-muted">Promote</a></li>
+          <li><a href="mentors.html" class="text-muted">Mentors</a></li>
+        </ul>
+      </div>
+      <div class="col-md-4 text-md-end">
+        <div class="small text-muted">© 2025 WomenEmpower • All rights reserved</div>
+      </div>
+    </div>
+  </div>
+</footer>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script>AOS.init({ duration: 700, once: true });</script>
+  <!-- Bootstrap JS + AOS -->
+  <script src="assets/Bootsrtrap/bootstrap.min.js"></script>
+  <script src="assets/Bootsrtrap/aos.js"></script>
+<script>
+AOS.init({ duration: 700, once: true });
+
+// Business data as JSON object
+const businesses = [
+    {
+        name: "The Stitch Studio",
+        category: "fashion",
+        location: "lahore",
+        rating: 4.8,
+        description: "Handcrafted bespoke clothing & accessories.",
+        image: "https://placehold.co/400x200/f1e9f8/7b4397?text=The+Stitch+Studio",
+    },
+    {
+        name: "Auntie's Kitchen",
+        category: "food",
+        location: "karachi",
+        rating: 4.0,
+        description: "Delicious baked goods and custom cakes for all occasions.",
+        image: "https://placehold.co/400x200/fde7f1/7b4397?text=Auntie's+Kitchen",
+    },
+    {
+        name: "Gemstone Jewels",
+        category: "handicrafts",
+        location: "islamabad",
+        rating: 4.9,
+        description: "Elegant handmade jewelry and accessories.",
+        image: "https://placehold.co/400x200/e9f1f8/7b4397?text=Gemstone+Jewels",
+    },
+    {
+        name: "Artisan's Palette",
+        category: "handicrafts",
+        location: "lahore",
+        rating: 3.7,
+        description: "Hand-picked art supplies for creators of all levels.",
+        image: "https://placehold.co/400x200/f8f1e9/7b4397?text=Artisan's+Palette",
+    },
+    {
+        name: "Saffron Glow",
+        category: "beauty",
+        location: "karachi",
+        rating: 4.6,
+        description: "Organic and natural skincare products for radiant skin.",
+        image: "https://placehold.co/400x200/e9f8f1/7b4397?text=Saffron+Glow",
+    },
+    {
+        name: "Nexus Consulting",
+        category: "services",
+        location: "islamabad",
+        rating: 4.2,
+        description: "Professional business consulting for startups and SMEs.",
+        image: "https://placehold.co/400x200/fde7f1/7b4397?text=Nexus+Consulting",
+    },
+     {
+        name: "Tech Innovators",
+        category: "tech",
+        location: "lahore",
+        rating: 4.7,
+        description: "Innovative software solutions and tech support.",
+        image: "https://placehold.co/400x200/f1e9f8/7b4397?text=Tech+Innovators",
+    },
+    {
+        name: "Floral & Co.",
+        category: "handicrafts",
+        location: "karachi",
+        rating: 3.2,
+        description: "Custom floral arrangements and event decor.",
+        image: "https://placehold.co/400x200/e9f1f8/7b4397?text=Floral+%26+Co.",
+    }
+];
+
+// Detailed profile data for each business
+const fullProfiles = [
+  {
+    name: "The Stitch Studio",
+    founder: "Ayesha Khan",
+    bio: "Ayesha started The Stitch Studio from her home, fueled by a passion for traditional embroidery and modern fashion. She believes in creating unique pieces that tell a story, preserving local craftsmanship while catering to contemporary tastes. The studio has now grown to employ several local women, providing them with sustainable livelihoods.",
+    mission: "To empower women through art and commerce by creating beautiful, high-quality, handcrafted fashion that celebrates heritage and individuality. We strive to provide opportunities for local artisans and promote sustainable production practices.",
+    contact: "https://www.google.com/search?q=The+Stitch+Studio+lahore",
+    image: "https://placehold.co/600x400/f1e9f8/7b4397?text=The+Stitch+Studio",
+    category: "Fashion & Apparel",
+    rating: 4.8,
+    description: "Handcrafted bespoke clothing & accessories.",
+  },
+  {
+    name: "Auntie's Kitchen",
+    founder: "Sara Ali",
+    bio: "A retired school teacher, Sara found her second calling in baking. Her kitchen quickly became a local sensation, known for its delectable cakes and pastries made with love and secret family recipes. She prides herself on using only the freshest ingredients to bring joy to every customer's celebration.",
+    mission: "To spread happiness, one cake at a time. We aim to be the go-to bakery for all of life's special moments, offering delicious, homemade treats that feel like a warm hug.",
+    contact: "https://www.google.com/search?q=Auntie%27s+Kitchen+karachi",
+    image: "https://placehold.co/600x400/fde7f1/7b4397?text=Auntie's+Kitchen",
+    category: "Food & Beverage",
+    rating: 4.0,
+    description: "Delicious baked goods and custom cakes for all occasions.",
+  },
+  {
+    name: "Gemstone Jewels",
+    founder: "Zainab Ahmed",
+    bio: "Zainab, a trained gemologist, combines her deep knowledge of precious stones with her artistic vision to create one-of-a-kind jewelry. Each piece is a testament to her dedication to quality and design. She is committed to sourcing ethical stones and creating timeless heirlooms.",
+    mission: "To craft elegant and ethical jewelry that empowers women to shine. We believe that every piece of jewelry should be as unique and beautiful as the person wearing it, with a story of integrity behind every stone.",
+    contact: "https://www.google.com/search?q=Gemstone+Jewels+islamabad",
+    image: "https://placehold.co/600x400/e9f1f8/7b4397?text=Gemstone+Jewels",
+    category: "Handicrafts & Arts",
+    rating: 4.9,
+    description: "Elegant handmade jewelry and accessories.",
+  },
+  {
+    name: "Artisan's Palette",
+    founder: "Fatima Noor",
+    bio: "After struggling to find quality art supplies in local stores, Fatima decided to create her own solution. Artisan's Palette is her curated collection of the finest materials, tools, and kits for aspiring and professional artists. She also hosts workshops to foster a vibrant creative community.",
+    mission: "To inspire creativity by providing artists with the best tools and a supportive community. We aim to be a one-stop-shop for all things art, making creativity accessible to everyone.",
+    contact: "https://www.google.com/search?q=Artisan%27s+Palette+lahore",
+    image: "https://placehold.co/600x400/f8f1e9/7b4397?text=Artisan's+Palette",
+    category: "Handicrafts & Arts",
+    rating: 3.7,
+    description: "Hand-picked art supplies for creators of all levels.",
+  },
+  {
+    name: "Saffron Glow",
+    founder: "Nida Hussain",
+    bio: "Nida's journey began with a personal quest for natural skincare. Disappointed with commercial products, she used her background in chemistry to formulate her own. Saffron Glow is a line of organic, effective, and ethically-made skincare that prioritizes health and the environment.",
+    mission: "To promote holistic beauty and self-care with clean, natural, and sustainable skincare products. We believe that what you put on your body should be as pure as what you put in it.",
+    contact: "https://www.google.com/search?q=Saffron+Glow+karachi",
+    image: "https://placehold.co/600x400/e9f8f1/7b4397?text=Saffron+Glow",
+    category: "Beauty & Wellness",
+    rating: 4.6,
+    description: "Organic and natural skincare products for radiant skin.",
+  },
+  {
+    name: "Nexus Consulting",
+    founder: "Sana Tariq",
+    bio: "Sana is a seasoned business strategist with over a decade of experience. She founded Nexus Consulting to help small and medium-sized businesses navigate the complexities of growth. Her personalized approach has helped numerous entrepreneurs turn their ideas into successful ventures.",
+    mission: "To provide strategic guidance and practical solutions that empower entrepreneurs to achieve their business goals. We are committed to building long-term partnerships and fostering sustainable growth.",
+    contact: "https://www.google.com/search?q=Nexus+Consulting+islamabad",
+    image: "https://placehold.co/600x400/fde7f1/7b4397?text=Nexus+Consulting",
+    category: "Services",
+    rating: 4.2,
+    description: "Professional business consulting for startups and SMEs.",
+  },
+  {
+    name: "Tech Innovators",
+    founder: "Kiran Jamil",
+    bio: "Kiran is a software engineer who noticed a gap in the market for accessible tech support for small businesses. She launched Tech Innovators to provide affordable and reliable IT services, from web development to cybersecurity solutions. She is passionate about making technology an enabler, not a barrier.",
+    mission: "To bridge the tech divide for small businesses by offering user-friendly and effective technology solutions. We believe that every business, regardless of size, deserves access to top-tier technical expertise.",
+    contact: "https://www.google.com/search?q=Tech+Innovators+lahore",
+    image: "https://placehold.co/600x400/f1e9f8/7b4397?text=Tech+Innovators",
+    category: "Technology",
+    rating: 4.7,
+    description: "Innovative software solutions and tech support.",
+  },
+  {
+    name: "Floral & Co.",
+    founder: "Hira Mansoor",
+    bio: "Hira's love for flowers blossomed into a business that brings natural beauty to events and homes. Floral & Co. specializes in unique, custom arrangements that reflect the client's personality and the occasion's theme. Hira works closely with local flower farms to ensure freshness and sustainability.",
+    mission: "To celebrate life's moments with artistry and nature's beauty. We are dedicated to creating memorable floral designs that are both stunning and environmentally conscious.",
+    contact: "https://www.google.com/search?q=Floral+%26+Co.+karachi",
+    image: "https://placehold.co/600x400/e9f1f8/7b4397?text=Floral+%26+Co.",
+    category: "Handicrafts & Arts",
+    rating: 3.2,
+    description: "Custom floral arrangements and event decor.",
+  }
+];
+
+// Get references to filter, search, and modal elements
+const categoryFilter = document.getElementById('categoryFilter');
+const locationFilter = document.getElementById('locationFilter');
+const ratingFilter = document.getElementById('ratingFilter');
+const searchBar = document.getElementById('searchBar');
+const businessListContainer = document.getElementById('business-list');
+const noResultsMessage = document.getElementById('no-results-message');
+
+const profileModal = new bootstrap.Modal(document.getElementById('profileModal'));
+const profileImage = document.getElementById('profile-image');
+const profileName = document.getElementById('profile-name');
+const profileCategory = document.getElementById('profile-category');
+const profileRating = document.getElementById('profile-rating');
+const profileDescription = document.getElementById('profile-description');
+const profileBio = document.getElementById('profile-bio');
+const profileMission = document.getElementById('profile-mission');
+const profileContact = document.getElementById('profile-contact');
+
+// Function to generate the star icons for a given rating
+function generateStarHtml(rating) {
+  let starHtml = '';
+  const fullStars = Math.floor(rating);
+  const hasHalfStar = rating % 1 >= 0.5;
+
+  for (let i = 0; i < fullStars; i++) {
+    starHtml += '<i class="bi bi-star-fill text-warning"></i>';
+  }
+  if (hasHalfStar) {
+    starHtml += '<i class="bi bi-star-half text-warning"></i>';
+  }
+  const emptyStars = 5 - fullStars - (hasHalfStar ? 1 : 0);
+  for (let i = 0; i < emptyStars; i++) {
+    starHtml += '<i class="bi bi-star text-warning"></i>';
+  }
+  return `<div class="d-flex align-items-center">${starHtml} <span class="ms-2 text-warning">${rating.toFixed(1)}</span></div>`;
+}
+
+// Function to render the businesses based on filters
+function renderBusinesses() {
+  const selectedCategory = categoryFilter.value;
+  const selectedLocation = locationFilter.value;
+  const minRating = parseFloat(ratingFilter.value);
+  const searchTerm = searchBar.value.toLowerCase();
+  
+  // Clear the container first
+  businessListContainer.innerHTML = '';
+  let resultsFound = false;
+
+  businesses.forEach((business, index) => {
+    // Check if the business matches all filter criteria
+    const categoryMatch = selectedCategory === 'all' || business.category === selectedCategory;
+    const locationMatch = selectedLocation === 'all' || business.location === selectedLocation;
+    const ratingMatch = business.rating >= minRating;
+    const searchMatch = business.name.toLowerCase().includes(searchTerm) || business.description.toLowerCase().includes(searchTerm);
+    
+    // If all filters match, create the card and append it
+    if (categoryMatch && locationMatch && ratingMatch && searchMatch) {
+      resultsFound = true;
+      const starRatingHtml = generateStarHtml(business.rating);
+      
+      const cardHtml = `
+        <div class="col-md-6 col-xl-4 business-item" data-aos="fade-up" data-aos-delay="${index * 50}">
+          <div class="card business-card h-100 shadow-sm">
+            <img src="${business.image}" class="card-img-top object-fit-cover" alt="${business.name}" style="height:200px">
+            <div class="card-body">
+              <h5 class="card-title fw-semibold">${business.name}</h5>
+              <p class="small mb-1">
+                ${starRatingHtml}
+              </p>
+              <p class="card-text text-muted small">${business.description}
+                <br><i class="bi bi-geo-alt-fill me-1 text-danger"></i>${business.location.charAt(0).toUpperCase() + business.location.slice(1)}, Pakistan
+              </p>
+              <button class="btn btn-outline-primary btn-sm mt-2 view-profile-btn" data-bs-toggle="modal" data-bs-target="#profileModal" data-index="${index}">View Profile</button>
+            </div>
+          </div>
+        </div>
+      `;
+      businessListContainer.innerHTML += cardHtml;
+    }
+  });
+
+  // Show or hide the "no results" message
+  if (resultsFound) {
+    noResultsMessage.classList.add('d-none');
+  } else {
+    noResultsMessage.classList.remove('d-none');
+  }
+}
+
+// Function to handle showing the profile modal
+function showProfile(event) {
+  const index = event.target.dataset.index;
+  const profile = fullProfiles[index];
+
+  if (profile) {
+    profileImage.src = profile.image;
+    profileImage.alt = profile.name;
+    profileName.textContent = profile.name;
+    // Removed profileCategory and profileDescription from modal body
+    profileRating.innerHTML = generateStarHtml(profile.rating);
+    profileDescription.textContent = profile.description;
+    profileBio.textContent = profile.bio;
+    profileMission.textContent = profile.mission;
+    profileContact.href = profile.contact;
+    profileModal.show();
+  }
+}
+
+// Add event listeners to the filters and search bar
+categoryFilter.addEventListener('change', renderBusinesses);
+locationFilter.addEventListener('change', renderBusinesses);
+ratingFilter.addEventListener('change', renderBusinesses);
+searchBar.addEventListener('input', renderBusinesses);
+
+// Add event listener for the "View Profile" buttons
+businessListContainer.addEventListener('click', (event) => {
+  if (event.target.classList.contains('view-profile-btn')) {
+    showProfile(event);
+  }
+});
+
+// Run the filter on page load to set the initial state
+document.addEventListener('DOMContentLoaded', renderBusinesses);
+</script>
 </body>
 </html>

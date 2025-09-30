@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Women Empower — Mentors</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="assets/Bootsrtrap/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+  <!-- AOS for scroll animations -->
+  <link href="assets/Bootsrtrap/aos.css" rel="stylesheet">
+  <!-- header link -->
+  <script src="assets/JS/layout.js"></script>
+  <!-- Css Link -->
+  <link rel="stylesheet" href="assets/style/Mentors-card.css">
+
+</head>
+<body class="bg-white">
+
+<!-- Navigation Bar-->
+
+
+
+<header class="text-center py-5 bg-lavender" style="background-color:#d8a8eba2;">
+  <div class="container" data-aos="fade-up">
+    <h1 class="fw-bold display-5 grad-text">Find Your Mentor. Get Guidance.</h1>
+    <p class="lead mx-auto" style="max-width:700px">
+      Connect with experienced professionals who can provide one-on-one support for your business journey.
+    </p>
+    <!-- The button now correctly links to the section ID below -->
+    <a href="#mentors" class="btn btn-gold btn-lg mt-3">Meet the Mentors</a>
+  </div>
+</header>
+
+<section class="container py-5" id="mentors">
+  <div class="text-center mb-5">
+    <h2 class="fw-bold grad-text" data-aos="fade-up">Meet Our Mentors</h2>
+    <p class="text-muted" data-aos="fade-up" data-aos-delay="100">Browse a diverse group of experts across various industries</p>
+  </div>
+  
+  <!-- This is the container where mentors will be dynamically loaded by JavaScript -->
+  <div class="row g-4" id="mentorList">
+    <!-- Mentor cards will be injected here -->
+  </div>
+  
+</section>
+
+<section class="py-5 bg-blush">
+  <div class="container">
+    <div class="text-center mb-4">
+      <h2 class="fw-bold grad-text" data-aos="fade-up">How Mentorship Works</h2>
+      <p class="text-muted" data-aos="fade-up" data-aos-delay="100">Simple steps to get the guidance you need</p>
+    </div>
+   <div class="row g-4 align-items-center">
+      <div class="col-md-6 order-md-2" data-aos="fade-left">
+        <!-- Replaced local asset with placeholder image -->
+        <img src="https://placehold.co/600x400/f1e9f8/7b4397?text=Mentorship+Session" class="img-fluid rounded shadow-lg" alt="Mentorship session">
+      </div>
+      <div class="col-md-6 order-md-1" data-aos="fade-right">
+        <ul class="list-unstyled">
+          <li class="mb-4">
+            <h5 class="fw-bold "><i class="bi bi-1-circle-fill me-2 gold-text" style="font-size: 30px;"></i> Choose a Mentor</h5>
+            <p class="text-muted ms-4 ps-1">Browse our directory to find a mentor whose experience aligns with your goals.</p>
+          </li>
+          <li class="mb-4">
+            <h5 class="fw-bold "><i class="bi bi-2-circle-fill me-2 gold-text" style="font-size: 30px;"></i> Book a Session</h5>
+            <p class="text-muted ms-4 ps-1">Easily schedule a one-on-one session at a time that is convenient for you.</p>
+          </li>
+          <li>
+            <h5 class="fw-bold "><i class="bi bi-3-circle-fill me-2 gold-text" style="font-size: 30px;"></i> Start Growing</h5>
+            <p class="text-muted ms-4 ps-1">Connect and get personalized advice to accelerate your business growth.</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="container text-center py-5">
+  <h3 class="fw-bold mb-3 grad-text" data-aos="fade-up">Ready to get started?</h3>
+  <p class="text-muted mb-4" data-aos="fade-up" data-aos-delay="100">
+    Join now to access our full directory of mentors and book your first session.
+  </p>
+  <a href="#" class="btn btn-gold px-4 py-2" data-aos="zoom-in">Join Now</a>
+</section>
+
+<!-- Footer -->
+
+
+
+<!-- Booking Modal Structure -->
+<div class="modal fade" id="bookingModal" tabindex="-1" aria-labelledby="bookingModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content border-0 rounded-4 shadow-lg">
+      <div class="modal-header border-0 pb-0">
+        <h5 class="modal-title fw-bold grad-text" id="bookingModalLabel">Book a Session with <span id="mentorNameModal"></span></h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body p-4">
+        <div class="row">
+            <div class="col-md-4 text-center mb-3 mb-md-0">
+                <img id="mentorImageModal" src="" class="img-fluid rounded-circle shadow-sm mb-3" style="width:150px; height:150px; object-fit: cover;" alt="Mentor Picture">
+                <p class="small text-muted mb-1" id="mentorSpecialtyModal"></p>
+                <!-- Price is highlighted -->
+                <div class="fw-bold fs-5 text-success" id="mentorPriceModal"></div> 
+            </div>
+            <div class="col-md-8">
+                <h6 class="fw-bold grad-text">About the Mentor</h6>
+                <p class="small text-muted" id="mentorBioModal"></p>
+
+                <h6 class="fw-bold grad-text mt-3">Availability Snapshot</h6>
+                <p class="small text-muted"><i class="bi bi-clock-fill me-2" style="color:var(--deep)"></i><span id="mentorSlotsModal"></span></p>
+                
+                <hr>
+
+                <p class="text-muted small">
+                    To finalize your booking and view the calendar, click "Proceed to Calendar Booking" below.
+                </p>
+                
+                <!-- Custom Message Box for Feedback (Replaces console log) -->
+                <div id="bookingMessage" class="alert alert-success d-none mt-3 p-2 rounded-3 small" role="alert">
+                    <i class="bi bi-calendar-check-fill me-2"></i> **Redirecting you to the secure calendar now...**
+                </div>
+                
+                <button type="button" class="btn btn-submit w-100" id="proceedBookingBtn" onclick="handleCalendarBooking(this)">
+                    Proceed to Calendar Booking
+                </button>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- End Booking Modal -->
+
+<!-- Bootstrap JS + AOS from CDN -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="assets/Json-Data/Mentors-card-data.js"></script>
+<script src="assets/JS/Mentors-card.js"></script>
+<script> 
+    AOS.init({ duration: 700, once: true }); 
+</script>
+</body>
+</html>

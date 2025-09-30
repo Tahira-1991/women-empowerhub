@@ -1,0 +1,49 @@
+    /* Custom Styling for Women Empower Theme */
+    :root{
+      --lavender:#f1e9f8;
+      --blush:#fde7f1;
+      --deep:#7b4397;
+      --gold:#ffcc70;
+      --muted:#6b6b6b;
+    }
+    .grad-text{
+      background: linear-gradient(90deg,var(--deep), #9b59b6);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .btn-gold{background: var(--gold); color:#3a2f22; font-weight:600; border-radius: 40px;}
+    .bg-lavender{background: var(--lavender);}
+    .bg-blush{background: var(--blush);}
+    
+    /* Mentor Card Styling */
+    .mentor-profile-card{
+        transition: .3s; 
+        border-radius: 12px;
+        border: 1px solid rgba(0,0,0,0.05);
+    }
+    .mentor-profile-card:hover{
+        transform: translateY(-5px); 
+        box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+    }
+    .gold-text {
+        color: var(--gold);
+    }
+    .mentor-profile-card img {
+        border-radius: 12px 0 0 12px; /* Rounded only on the left side */
+    }
+
+    /* Custom Submit/Booking Button Style */
+    .btn-submit {
+        background-color: var(--deep);
+        border-color: var(--deep);
+        color: white;
+        transition: background-color 0.3s, border-color 0.3s;
+        font-weight: 600;
+        border-radius: 8px;
+    }
+    .btn-submit:hover {
+        background-color: #9b59b6;
+        border-color: #9b59b6;
+        color: white;
+    }
+    

@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
@@ -7,196 +8,118 @@
 
   <link href="assets/style/joinnow.css" rel="stylesheet">
 
-    <!-- Bootstrap CSS -->
+  <!-- Bootstrap CSS -->
   <link href="assets/Bootsrtrap/bootstrap.min.css" rel="stylesheet">
   <!-- Bootstrap icons -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
   <!-- AOS for scroll animations -->
   <link href="assets/Bootsrtrap/aos.css" rel="stylesheet">
-<!-- header link -->
-<script src="assets/JS/layout.js"></script>
+  <!-- header link -->
+  <script src="assets/JS/layout.js"></script>
+  <!-- stylesheet link -->
+   <link rel="stylesheet" href="assets/style/joinnow.css">
   <!-- Google Fonts for Inter -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-  
+
 </head>
 
 <body class="d-flex flex-column min-vh-100">
 
 
 
-<!-- FORM CONTAINER -->
-<div class="container my-5 flex-grow-1 d-flex align-items-center justify-content-center">
-  <div class="main-form-container" data-aos="fade-up"  style="background-image: url('assets/img/do.jpg'); background-repeat: no-repeat;  background-size:cover;  ">
-    <div class="row g-0">
-      <div class="col-md-6 order-md-2 form-image-section"></div>
-      <div class="col-md-6 order-md-1 form-content-section">
-        
-        <!-- Registration Form (Default) -->
-        <div id="registerFormContainer">
-          <h4 class="form-title text-center" data-aos="fade-down" data-aos-delay="100">Registration Form</h4>
-          <form id="registerForm" class="row g-3">
-            <div class="col-md-6" data-aos="fade-up" data-aos-delay="200">
-              <label for="firstName" class="form-label visually-hidden">First Name</label>
-              <input type="text" class="form-control" id="firstName" placeholder="First Name" required>
-            </div>
-            <div class="col-md-6" data-aos="fade-up" data-aos-delay="300">
-              <label for="lastName" class="form-label visually-hidden">Last Name</label>
-              <input type="text" class="form-control" id="lastName" placeholder="Last Name" required>
-            </div>
-            <div class="col-12" data-aos="fade-up" data-aos-delay="400">
-              <label for="registerEmail" class="form-label visually-hidden">Email</label>
-              <input type="email" class="form-control" id="registerEmail" placeholder="Email" required>
-            </div>
-            <div class="col-12" data-aos="fade-up" data-aos-delay="500">
-              <label for="registerPassword" class="form-label visually-hidden">Password</label>
-              <input type="password" class="form-control" id="registerPassword" placeholder="Password" required>
-            </div>
-            <div class="col-12" data-aos="fade-up" data-aos-delay="600">
-              <label for="confirmPassword" class="form-label visually-hidden">Confirm Password</label>
-              <input type="password" class="form-control" id="confirmPassword" placeholder="Confirm Password" required>
-            </div>
-            <div class="col-12" data-aos="fade-up" data-aos-delay="700">
-              <div class="form-check">
-                <input class="form-check-input rounded-3" type="checkbox" id="termsCheck" required>
-                <label class="form-check-label" for="termsCheck">
-                  I accept the Terms of Use & Privacy Policy.
-                </label>
+  <!-- FORM CONTAINER -->
+  <div class="container my-5 flex-grow-1 d-flex align-items-center justify-content-center">
+    <div class="main-form-container" data-aos="fade-up"
+      style="background-image: url('assets/img/do.jpg'); background-repeat: no-repeat;  background-size:cover;  ">
+      <div class="row g-0">
+        <div class="col-md-6 order-md-2 form-image-section"></div>
+        <div class="col-md-6 order-md-1 form-content-section">
+
+          <!-- Registration Form (Default) -->
+          <div id="registerFormContainer">
+            <h4 class="form-title text-center" data-aos="fade-down" data-aos-delay="100">Registration Form</h4>
+            <form id="registerForm" class="row g-3">
+              <div class="col-md-6" data-aos="fade-up" data-aos-delay="200">
+                <label for="firstName" class="form-label visually-hidden">First Name</label>
+                <input type="text" class="form-control" id="firstName" placeholder="First Name" required>
               </div>
+              <div class="col-md-6" data-aos="fade-up" data-aos-delay="300">
+                <label for="lastName" class="form-label visually-hidden">Last Name</label>
+                <input type="text" class="form-control" id="lastName" placeholder="Last Name" required>
+              </div>
+              <div class="col-12" data-aos="fade-up" data-aos-delay="400">
+                <label for="registerEmail" class="form-label visually-hidden">Email</label>
+                <input type="email" class="form-control" id="registerEmail" placeholder="Email" required>
+              </div>
+              <div class="col-12" data-aos="fade-up" data-aos-delay="500">
+                <label for="registerPassword" class="form-label visually-hidden">Password</label>
+                <input type="password" class="form-control" id="registerPassword" placeholder="Password" required>
+              </div>
+              <div class="col-12" data-aos="fade-up" data-aos-delay="600">
+                <label for="confirmPassword" class="form-label visually-hidden">Confirm Password</label>
+                <input type="password" class="form-control" id="confirmPassword" placeholder="Confirm Password"
+                  required>
+              </div>
+              <div class="col-12" data-aos="fade-up" data-aos-delay="700">
+                <div class="form-check">
+                  <input class="form-check-input rounded-3" type="checkbox" id="termsCheck" required>
+                  <label class="form-check-label" for="termsCheck">
+                    I accept the Terms of Use & Privacy Policy.
+                  </label>
+                </div>
+              </div>
+              <div id="registerMessage" class="col-12 text-center fw-bold" data-aos="fade-up" data-aos-delay="800">
+              </div>
+              <div class="col-12 d-grid" data-aos="fade-up" data-aos-delay="900">
+                <button type="submit" class="btn btn-submit rounded-pill">Register Now</button>
+              </div>
+            </form>
+            <div class="text-center mt-4" data-aos="fade-up" data-aos-delay="1000">
+              <small class="text-muted">Already have an account? <a href="#"
+                  class="text-decoration-none text-muted fw-bold" id="showLoginLink">Log in here</a></small>
             </div>
-            <div id="registerMessage" class="col-12 text-center fw-bold" data-aos="fade-up" data-aos-delay="800"></div>
-            <div class="col-12 d-grid" data-aos="fade-up" data-aos-delay="900">
-              <button type="submit" class="btn btn-submit rounded-pill">Register Now</button>
-            </div>
-          </form>
-          <div class="text-center mt-4" data-aos="fade-up" data-aos-delay="1000">
-            <small class="text-muted">Already have an account? <a href="#" class="text-decoration-none text-muted fw-bold" id="showLoginLink">Log in here</a></small>
           </div>
-        </div>
 
-        <!-- Login Form (Initially Hidden) -->
-        <div id="loginFormContainer" class="d-none">
-          <h4 class="form-title text-center" data-aos="fade-down" data-aos-delay="100">Login Form</h4>
-          <form id="loginForm" class="row g-3">
-            <div class="col-12" data-aos="fade-up" data-aos-delay="200">
-              <label for="loginEmail" class="form-label visually-hidden">Email</label>
-              <input type="email" class="form-control" id="loginEmail" placeholder="Email" required>
+          <!-- Login Form (Initially Hidden) -->
+          <div id="loginFormContainer" class="d-none">
+            <h4 class="form-title text-center" data-aos="fade-down" data-aos-delay="100">Login Form</h4>
+            <form id="loginForm" class="row g-3">
+              <div class="col-12" data-aos="fade-up" data-aos-delay="200">
+                <label for="loginEmail" class="form-label visually-hidden">Email</label>
+                <input type="email" class="form-control" id="loginEmail" placeholder="Email" required>
+              </div>
+              <div class="col-12" data-aos="fade-up" data-aos-delay="300">
+                <label for="loginPassword" class="form-label visually-hidden">Password</label>
+                <input type="password" class="form-control" id="loginPassword" placeholder="Password" required>
+              </div>
+              <div id="loginMessage" class="col-12 text-center fw-bold" data-aos="fade-up" data-aos-delay="400"></div>
+              <div class="col-12 d-grid" data-aos="fade-up" data-aos-delay="500">
+                <button type="submit" class="btn btn-submit rounded-pill">Log In</button>
+              </div>
+            </form>
+            <div class="text-center mt-4" data-aos="fade-up" data-aos-delay="600">
+              <small class="text-muted">Don't have an account? <a href="#"
+                  class="text-decoration-none text-muted fw-bold" id="showRegisterLink">Register here</a></small>
             </div>
-            <div class="col-12" data-aos="fade-up" data-aos-delay="300">
-              <label for="loginPassword" class="form-label visually-hidden">Password</label>
-              <input type="password" class="form-control" id="loginPassword" placeholder="Password" required>
-            </div>
-            <div id="loginMessage" class="col-12 text-center fw-bold" data-aos="fade-up" data-aos-delay="400"></div>
-            <div class="col-12 d-grid" data-aos="fade-up" data-aos-delay="500">
-              <button type="submit" class="btn btn-submit rounded-pill">Log In</button>
-            </div>
-          </form>
-          <div class="text-center mt-4" data-aos="fade-up" data-aos-delay="600">
-            <small class="text-muted">Don't have an account? <a href="#" class="text-decoration-none text-muted fw-bold" id="showRegisterLink">Register here</a></small>
           </div>
-        </div>
 
+        </div>
       </div>
     </div>
   </div>
-</div>
 
 
 
 
-   <!-- Bootstrap JS + AOS -->
+  <!-- Bootstrap JS + AOS -->
   <script src="assets/Bootsrtrap/bootstrap.min.js"></script>
   <script src="assets/Bootsrtrap/aos.js"></script>
   <script src="assets/JS/joinnow.js"></script>
-<!-- <script>
-  AOS.init({
-    duration: 800,
-    once: true,
-  });
-
-  document.addEventListener('DOMContentLoaded', () => {
-    const registerFormContainer = document.getElementById('registerFormContainer');
-    const loginFormContainer = document.getElementById('loginFormContainer');
-    const showLoginLink = document.getElementById('showLoginLink');
-    const showRegisterLink = document.getElementById('showRegisterLink');
-
-    showLoginLink.addEventListener('click', (e) => {
-      e.preventDefault();
-      registerFormContainer.classList.add('d-none');
-      loginFormContainer.classList.remove('d-none');
-      AOS.refresh();
-    });
-
-    showRegisterLink.addEventListener('click', (e) => {
-      e.preventDefault();
-      loginFormContainer.classList.add('d-none');
-      registerFormContainer.classList.remove('d-none');
-      AOS.refresh();
-    });
-
-    // Handle form submissions
-    document.getElementById('registerForm').addEventListener('submit', function(event) {
-      event.preventDefault(); 
-      const firstName = document.getElementById('firstName').value.trim();
-      const lastName = document.getElementById('lastName').value.trim();
-      const email = document.getElementById('registerEmail').value.trim();
-      const password = document.getElementById('registerPassword').value;
-      const confirmPassword = document.getElementById('confirmPassword').value;
-      const termsChecked = document.getElementById('termsCheck').checked;
-      const messageDiv = document.getElementById('registerMessage');
-
-      messageDiv.textContent = '';
-      messageDiv.className = 'text-center mb-3 fw-bold';
-
-      if (!firstName || !lastName || !email || !password || !confirmPassword) {
-        messageDiv.textContent = 'Please fill out all fields.';
-        messageDiv.classList.add('text-danger');
-        return;
-      }
-      if (password !== confirmPassword) {
-        messageDiv.textContent = 'Passwords do not match.';
-        messageDiv.classList.add('text-danger');
-        return;
-      }
-      if (!termsChecked) {
-        messageDiv.textContent = 'You must accept the terms and conditions.';
-        messageDiv.classList.add('text-danger');
-        return;
-      }
-      messageDiv.textContent = 'Account created successfully!';
-      messageDiv.classList.add('text-success');
-      setTimeout(() => {
-        document.getElementById('registerForm').reset();
-        messageDiv.textContent = '';
-      }, 2000);
-    });
-
-    document.getElementById('loginForm').addEventListener('submit', function(event) {
-      event.preventDefault(); 
-      const email = document.getElementById('loginEmail').value.trim();
-      const password = document.getElementById('loginPassword').value;
-      const messageDiv = document.getElementById('loginMessage');
-
-      messageDiv.textContent = '';
-      messageDiv.className = 'text-center mb-3 fw-bold';
-
-      if (!email || !password) {
-        messageDiv.textContent = 'Please enter your email and password.';
-        messageDiv.classList.add('text-danger');
-        return;
-      }
-      // In a real app, you would validate credentials on a server.
-      messageDiv.textContent = 'Login successful!';
-      messageDiv.classList.add('text-success');
-      setTimeout(() => {
-        document.getElementById('loginForm').reset();
-        messageDiv.textContent = '';
-      }, 2000);
-    });
-  });
-</script> -->
+  <script> AOS.init({ duration: 800,  once: true,});</script>
 
 </body>
+
 </html>

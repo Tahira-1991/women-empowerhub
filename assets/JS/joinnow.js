@@ -1,8 +1,4 @@
 
-  AOS.init({
-    duration: 800,
-    once: true,
-  });
 
   document.addEventListener('DOMContentLoaded', () => {
     const registerFormContainer = document.getElementById('registerFormContainer');

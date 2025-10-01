@@ -1,0 +1,123 @@
+:root {
+  --lavender: #f1e9f8;
+  --blush: #fde7f1;
+  --deep: #7b4397;
+  --gold: #ffcc70;
+  --muted: #6b6b6b;
+  --soft-purple: #D6A4E6;
+  --soft-pink: #FADADD;
+  --hero-bg: linear-gradient(135deg, var(--soft-purple), var(--soft-pink));
+}
+
+.grad-text {
+  background: linear-gradient(90deg, var(--deep), #9b59b6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero-gradient {
+  background: var(--hero-bg);
+}
+
+.btn-gold {
+  background: var(--gold);
+  color: #3a2f22;
+  font-weight: 600;
+  border-radius: 40px;
+}
+
+.bg-lavender {
+  background: var(--lavender);
+}
+
+.bg-blush {
+  background: var(--blush);
+}
+
+.form-control,
+.form-select {
+  border-radius: 10px;
+}
+
+.form-control:focus,
+.form-select:focus {
+  border-color: var(--deep);
+  outline: 2px solid var(--deep);
+  box-shadow: 0 0 0 0.3rem rgba(123, 67, 151, 0.25);
+}
+
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Glassmorphism Effect */
+.glass-card {
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.glass-card .form-control,
+.glass-card .form-select {
+  background: rgba(255, 255, 255, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  color: var(--deep);
+}
+
+.glass-card .form-control::placeholder {
+  color: rgba(123, 67, 151, 0.7);
+}
+
+.glass-card .form-label {
+  color: var(--deep);
+  font-weight: 500;
+}
+
+.registration-bg {
+  background: var(--hero-bg);
+}
+
+.hero-gradient {
+  background: linear-gradient(135deg, var(--lavender) 0%, var(--blush) 55%, #fff 100%);
+}
+
+/* Up and down animation */
+@keyframes float-up-down {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+/* Adjusted image height and applied animation */
+.vertical-img {
+  height: 800px;
+  width: 1000px;
+  object-fit: cover;
+  animation: float-up-down 4s ease-in-out infinite alternate;
+}
+
+/* Purple OK Button for Modal */
+.btn-purple {
+  background-color: var(--deep);
+  /* #7b4397 */
+  color: white;
+  font-weight: 600;
+  border-radius: 40px;
+  border: none;
+  padding: 0.5rem 1.5rem;
+  transition: background-color 0.3s ease;
+}
+
+.btn-purple:hover {
+  background-color: #9b59b6;
+  color: white;
+}

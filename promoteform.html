@@ -1,210 +1,101 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Women Empower — Register Your Brand</title>
 
-  <!-- Bootstrap CSS -->
   <link href="assets/Bootsrtrap/bootstrap.min.css" rel="stylesheet">
-  <!-- Bootstrap icons -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
-  <!-- AOS for scroll animations -->
   <link href="assets/Bootsrtrap/aos.css" rel="stylesheet">
-  <!-- header link -->
   <script src="assets/JS/layout.js"></script>
+  <link rel="stylesheet" href="assets/style/promoteform.css">
 
-  <style>
-    :root{
-      --lavender:#f1e9f8;
-      --blush:#fde7f1;
-      --deep:#7b4397;
-      --gold:#ffcc70;
-      --muted:#6b6b6b;
-      --soft-purple: #D6A4E6;
-      --soft-pink: #FADADD;
-      --hero-bg: linear-gradient(135deg, var(--soft-purple), var(--soft-pink));
-    }
-    .grad-text{
-      background: linear-gradient(90deg,var(--deep), #9b59b6);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-    .hero-gradient{
-      background: var(--hero-bg);
-    }
-    .btn-gold{background: var(--gold); color:#3a2f22; font-weight:600; border-radius: 40px;}
-    .bg-lavender{background: var(--lavender);}
-    .bg-blush{background: var(--blush);}
-    .form-control, .form-select {
-      border-radius: 10px;
-    }
-    .form-control:focus, .form-select:focus {
-      border-color: var(--deep);
-      outline: 2px solid var(--deep);
-      box-shadow: 0 0 0 0.3rem rgba(123, 67, 151, 0.25);
-    }
-    .img-fluid {
-      max-width: 100%;
-      height: auto;
-    }
-    /* Glassmorphism Effect */
-    .glass-card {
-      background: rgba(255, 255, 255, 0.2);
-      backdrop-filter: blur(10px);
-      border: 1px solid rgba(255, 255, 255, 0.3);
-      border-radius: 15px;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    }
-    .glass-card .form-control,
-    .glass-card .form-select {
-      background: rgba(255, 255, 255, 0.4);
-      border: 1px solid rgba(255, 255, 255, 0.4);
-      color: var(--deep);
-    }
-    .glass-card .form-control::placeholder {
-      color: rgba(123, 67, 151, 0.7);
-    }
-    .glass-card .form-label {
-      color: var(--deep);
-      font-weight: 500;
-    }
-    .registration-bg {
-      background: var(--hero-bg);
-    }
-    .hero-gradient {
-        background: linear-gradient(135deg, var(--lavender) 0%, var(--blush) 55%, #fff 100%);
-    }
-    /* Up and down animation */
-    @keyframes float-up-down {
-      0% { transform: translateY(0px); }
-      50% { transform: translateY(-15px); }
-      100% { transform: translateY(0px); }
-    }
-    /* Adjusted image height and applied animation */
-    .vertical-img {
-      height: 800px;
-      width: 1000px;
-      object-fit: cover;
-      animation: float-up-down 4s ease-in-out infinite alternate;
-    }
-
-    /* Purple OK Button for Modal */
-    .btn-purple {
-      background-color: var(--deep); /* #7b4397 */
-      color: white;
-      font-weight: 600;
-      border-radius: 40px;
-      border: none;
-      padding: 0.5rem 1.5rem;
-      transition: background-color 0.3s ease;
-    }
-
-    .btn-purple:hover {
-      background-color: #9b59b6;
-      color: white;
-    }
-  </style>
 </head>
+
 <body class="registration-bg">
 
-<header class="text-center py-5 hero-gradient">
-  <div class="container" data-aos="fade-up">
-    <h1 class="fw-bold display-5 grad-text">Register Your Brand.</h1>
-    <p class="lead mx-auto" style="max-width:700px">
-      Fill out the form below to get your business listed in our directory.
-    </p>
-  </div>
-</header>
-
-<section class="container py-5">
-  <div class="row g-5 align-items-center justify-content-center">
-    <div class="col-md-5 d-none d-md-block">
-      <img src="assets/img/promot.jpeg"
-           alt="Vertical image of women working" class="img-fluid rounded-4 shadow-lg vertical-img">
+  <header class="text-center py-5 hero-gradient">
+    <div class="container" data-aos="fade-up">
+      <h1 class="fw-bold display-5 grad-text">Register Your Brand.</h1>
+      <p class="lead mx-auto" style="max-width:700px">
+        Fill out the form below to get your business listed in our directory.
+      </p>
     </div>
-    <div class="col-md-7 col-lg-6">
-      <div class="card p-4 glass-card" data-aos="fade-left">
-        <div class="card-body">
-          <h4 class="card-title fw-bold text-center mb-4 text-dark">Business Information</h4>
-          <form>
-            <div class="mb-3">
-              <label for="businessName" class="form-label">Business Name</label>
-              <input type="text" class="form-control" id="businessName" required>
-            </div>
-            <div class="mb-3">
-              <label for="businessDescription" class="form-label">Business Description</label>
-              <textarea class="form-control" id="businessDescription" rows="4" required></textarea>
-            </div>
-            <div class="mb-3">
-              <label for="businessCategory" class="form-label">Category</label>
-              <select class="form-select" id="businessCategory" required>
-                <option selected disabled>Choose a category...</option>
-                <option>Fashion & Apparel</option>
-                <option>Food & Beverage</option>
-                <option>Handicrafts & Arts</option>
-                <option>Beauty & Wellness</option>
-                <option>Services</option>
-                <option>Technology</option>
-              </select>
-            </div>
-            <div class="mb-3">
-              <label for="contactEmail" class="form-label">Contact Email</label>
-              <input type="email" class="form-control" id="contactEmail" required>
-            </div>
-            <div class="mb-3">
-              <label for="phone" class="form-label">Phone Number</label>
-              <input type="tel" class="form-control" id="phone">
-            </div>
-            <div class="mb-3">
-              <label for="website" class="form-label">Website or Social Media Link</label>
-              <input type="url" class="form-control" id="website">
-            </div>
-            <div class="mb-4">
-              <label for="businessLogo" class="form-label">Business Logo / Image</label>
-              <input type="file" class="form-control" id="businessLogo" accept="image/*">
-            </div>
-            <div class="d-grid">
-              <button type="submit" class="btn btn-gold btn-lg">Submit</button>
-            </div>
-          </form>
+  </header>
+
+  <section class="container py-5">
+    <div class="row g-5 align-items-center justify-content-center">
+      <div class="col-md-5 d-none d-md-block">
+        <img src="assets/img/promot.jpeg" alt="Vertical image of women working" class="img-fluid rounded-4 shadow-lg vertical-img">
+      </div>
+      <div class="col-md-7 col-lg-6">
+        <div class="card p-4 glass-card" data-aos="fade-left">
+          <div class="card-body">
+            <h4 class="card-title fw-bold text-center mb-4 text-dark">Business Information</h4>
+            <form>
+              <div class="mb-3">
+                <label for="businessName" class="form-label">Business Name</label>
+                <input type="text" class="form-control" id="businessName" required>
+              </div>
+              <div class="mb-3">
+                <label for="businessDescription" class="form-label">Business Description</label>
+                <textarea class="form-control" id="businessDescription" rows="4" required></textarea>
+              </div>
+              <div class="mb-3">
+                <label for="businessCategory" class="form-label">Category</label>
+                <select class="form-select" id="businessCategory" required>
+                  <option selected disabled>Choose a category...</option>
+                  <option>Fashion & Apparel</option>
+                  <option>Food & Beverage</option>
+                  <option>Handicrafts & Arts</option>
+                  <option>Beauty & Wellness</option>
+                  <option>Services</option>
+                  <option>Technology</option>
+                </select>
+              </div>
+              <div class="mb-3">
+                <label for="contactEmail" class="form-label">Contact Email</label>
+                <input type="email" class="form-control" id="contactEmail" required>
+              </div>
+              <div class="mb-3">
+                <label for="phone" class="form-label">Phone Number</label>
+                <input type="tel" class="form-control" id="phone">
+              </div>
+              <div class="mb-3">
+                <label for="website" class="form-label">Website or Social Media Link</label>
+                <input type="url" class="form-control" id="website">
+              </div>
+              <div class="mb-4">
+                <label for="businessLogo" class="form-label">Business Logo / Image</label>
+                <input type="file" class="form-control" id="businessLogo" accept="image/*">
+              </div>
+              <div class="d-grid">
+                <button type="submit" class="btn btn-gold btn-lg">Submit</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="modal fade" id="submitModal" tabindex="-1" aria-labelledby="submitModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-body text-center py-4">
+          <h5 class="modal-title mb-3" id="submitModalLabel">Thank you for registering your brand!</h5>
+          <button type="button" class="btn btn-purple px-4" data-bs-dismiss="modal">OK</button>
         </div>
       </div>
     </div>
   </div>
-</section>
 
-<!-- Submission Modal -->
-<div class="modal fade" id="submitModal" tabindex="-1" aria-labelledby="submitModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content">
-      <div class="modal-body text-center py-4">
-        <h5 class="modal-title mb-3" id="submitModalLabel">Thank you for registering your brand!</h5>
-        <button type="button" class="btn btn-purple px-4" data-bs-dismiss="modal">OK</button>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- Bootstrap JS + AOS -->
-<script src="assets/Bootsrtrap/bootstrap.min.js"></script>
-<script src="assets/Bootsrtrap/aos.js"></script>
-<script> AOS.init({ duration: 700, once: true }); </script>
-
-<script>
-  const form = document.querySelector('form');
-  const submitModal = new bootstrap.Modal(document.getElementById('submitModal'));
-
-  form.addEventListener('submit', function(event) {
-    event.preventDefault(); // Rok do default form submit ko (demo ke liye)
-    // Yahan backend call ya ajax bhi kar sakte hain
-
-    submitModal.show(); // Modal dikhayein
-
-    // Optional: form reset karna ho to uncomment karen:
-    // form.reset();
-  });
-</script>
+  <script src="assets/Bootsrtrap/bootstrap.min.js"></script>
+  <script src="assets/Bootsrtrap/aos.js"></script>
+  <script src="assets/JS/promoteform.js"></script>
 
 </body>
+
 </html>

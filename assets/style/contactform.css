@@ -1,0 +1,98 @@
+:root {
+    --lavender:#f1e9f8;
+    --blush:#fde7f1;
+    --deep:#7b4397;
+    --gold:#ffcc70;
+    --muted:#6b6b6b;
+    --soft-purple: #D6A4E6;
+    --soft-pink: #FADADD;
+    --hero-bg: linear-gradient(135deg, var(--soft-purple), var(--soft-pink));
+}
+
+/* Gradient text */
+.grad-text {
+    background: linear-gradient(90deg,var(--deep), #9b59b6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Hero background gradient */
+.hero-gradient {
+    background: linear-gradient(135deg, var(--lavender) 0%, var(--blush) 55%, #fff 100%);
+}
+
+/* Buttons */
+.btn-submit {
+    background-color: var(--deep);
+    border-color: var(--deep);
+    color: white;
+    transition: background-color 0.3s, border-color 0.3s;
+    font-weight: 600;
+    border-radius: 8px;
+}
+.btn-submit:hover {
+    background-color: #9b59b6;
+    border-color: #9b59b6;
+    color: white;
+}
+
+/* Form controls glassy style */
+.form-control, .form-select {
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    color: var(--deep);
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+.form-control::placeholder {
+    color: rgba(123, 67, 151, 0.7);
+}
+.form-label {
+    color: var(--deep);
+    font-weight: 500;
+}
+.form-control:focus, .form-select:focus {
+    border-color: var(--deep);
+    outline: 2px solid var(--deep);
+    box-shadow: 0 0 0 0.3rem rgba(123, 67, 151, 0.25);
+    background: rgba(255, 255, 255, 0.6);
+    color: var(--deep);
+}
+
+/* Stakeholder box styling updated */
+.stakeholder-box {
+    background: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    padding: 30px;
+    border-left: 5px solid var(--deep);
+    color: var(--deep);
+}
+
+/* Header */
+header {
+    background: var(--hero-bg);
+    color: var(--deep);
+}
+
+/* Container bg */
+body {
+    background: var(--hero-bg);
+}
+
+/* Card style with glass effect */
+.card {
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    color: var(--deep);
+}
+
+/* Modal styling */
+.modal-content {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    color: var(--deep);
+}

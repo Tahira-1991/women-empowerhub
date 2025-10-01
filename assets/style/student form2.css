@@ -1,0 +1,185 @@
+:root {
+    --lavender: #f1e9f8;
+    --blush: #fde7f1;
+    --deep: #7b4397;
+    --gold: #ffcc70;
+    --muted: #6b6b6b;
+}
+
+/* Default body background color */
+body {
+    background-color: #f4f0f8;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    min-height: 100vh;
+    transition: background-image 0.5s ease-in-out, background-color 0.5s ease-in-out;
+}
+
+/* Success background state */
+body.success-bg {
+    background-image: url("https://images.pexels.com/photos/4050362/pexels-photo-4050362.jpeg");
+    background-color: transparent;
+}
+
+.grad-text {
+    background: linear-gradient(90deg, var(--deep), #9b59b6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.btn-gold {
+    background: var(--gold);
+    color: #3a2f22;
+    font-weight: 600;
+    border: none;
+    border-radius: 40px;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.btn-gold:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    color: #3a2f22;
+}
+
+.form-control,
+.form-select {
+    border-radius: 8px;
+}
+
+/* Custom focus and check styles */
+.form-control:focus,
+.form-select:focus,
+.form-check-input:focus {
+    border-color: var(--deep);
+    box-shadow: 0 0 0 0.25rem rgba(123, 67, 151, 0.25);
+}
+
+.form-check-input:checked {
+    background-color: var(--deep);
+    border-color: var(--deep);
+}
+
+.step-nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+.step-nav-container::before {
+    content: '';
+    position: absolute;
+    top: 15px;
+    left: 10%;
+    right: 10%;
+    height: 4px;
+    background-color: #e9ecef;
+    z-index: 0;
+}
+
+.step-indicator {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+    transition: color 0.3s;
+}
+
+.step-indicator .step-number {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #e9ecef;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    color: #6c757d;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.step-indicator .step-label {
+    font-size: 0.8rem;
+    margin-top: 0.5rem;
+    white-space: nowrap;
+    transition: color 0.3s;
+    color: #6c757d;
+}
+
+.step-indicator.active .step-number {
+    background-color: var(--deep);
+    color: #fff;
+}
+
+.step-indicator.active .step-label {
+    color: var(--deep);
+    font-weight: bold;
+}
+
+/* Connectors for mobile */
+@media (max-width: 768px) {
+    .step-nav-container {
+        flex-direction: column;
+        align-items: flex-start;
+        padding-left: 1rem;
+    }
+
+    .step-nav-container::before {
+        top: 0;
+        left: 20px;
+        bottom: 0;
+        width: 4px;
+        height: 100%;
+    }
+
+    .step-indicator {
+        flex-direction: row;
+        margin-bottom: 1.5rem;
+    }
+
+    .step-indicator .step-number {
+        margin-right: 1rem;
+    }
+}
+
+.form-step {
+    display: none;
+}
+
+.form-step.active {
+    display: block;
+}
+
+/* Frosted glass card styling */
+.card {
+    border-radius: 12px;
+    border: none;
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Success page styling */
+.success-page {
+    display: none;
+    text-align: center;
+    padding: 4rem 2rem;
+}
+
+.success-page .bi-check-circle {
+    font-size: 4rem;
+    color: #28a745;
+    margin-bottom: 1rem;
+}
+
+/* Hero section styling */
+.hero-gradient {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.2));
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+}

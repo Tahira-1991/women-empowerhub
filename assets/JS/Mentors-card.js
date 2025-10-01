@@ -9,7 +9,7 @@
         // Loop through the data and build the HTML string
         mentors.forEach((mentor, index) => { // Use index for identifying the mentor
             // Placeholder URL generation using specific background color from data
-            const imageUrl = `https://placehold.co/200x200/${mentor.imageBg}/7b4397?text=${mentor.imageText}`;
+            const imageUrl = mentor.image;
 
             html += `
                 <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="${mentor.delay}">
@@ -52,7 +52,7 @@
         document.getElementById('mentorBioModal').textContent = mentor.bio;
         
         // Image URL (using the same placeholder logic)
-        const imageUrl = `https://placehold.co/200x200/${mentor.imageBg}/7b4397?text=${mentor.imageText}`;
+        const imageUrl = mentor.image;
         document.getElementById('mentorImageModal').src = imageUrl;
 
         // Reset button and message state every time the modal is opened

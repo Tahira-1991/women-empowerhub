@@ -1,8 +1,8 @@
 const mentors = [
     { 
-        name: "Sarah Khan", 
+        name: "Sarah Javed", 
         specialty: "Specialist in Home Baking and Business Operations", 
-        imageText: "Baker", 
+        image: "assets/img/sara.png", 
         imageBg: "fde7f1", // blush
         delay: 0,
         price: "$50/hr",
@@ -10,9 +10,9 @@ const mentors = [
         bio: "Sarah is a successful founder who scaled her home baking venture into a national franchise. She mentors on cost management, scaling logistics, and brand development.",
     },
     { 
-        name: "Ayesha Malik", 
+        name: "Ayesha Sohal", 
         specialty: "Expert in Event Planning and Client Management", 
-        imageText: "Planner", 
+        image: "assets/img/aishasohail.png", 
         imageBg: "f1e9f8", // lavender
         delay: 100,
         price: "$75/hr",
@@ -20,9 +20,9 @@ const mentors = [
         bio: "Ayesha runs a highly sought-after event management company. Her mentoring focuses on client acquisition, budget handling, and vendor negotiation.",
     },
     { 
-        name: "Fatima Ahmed", 
+        name: "Fatima Raza", 
         specialty: "Specialist in Boutique Business and Fashion Design", 
-        imageText: "Designer", 
+        image: "assets/img/fatima.png", 
         imageBg: "fde7f1", 
         delay: 200,
         price: "$60/hr",
@@ -30,9 +30,9 @@ const mentors = [
         bio: "Fatima helps small fashion and boutique owners establish their brand identity, manage inventory, and master social media selling techniques.",
     },
     { 
-        name: "Hassan Raza", 
+        name: "Anam Siddiqui", 
         specialty: "Digital Marketing and SEO Strategy Consultant", 
-        imageText: "Marketing", 
+        image: "assets/img/anam.png", 
         imageBg: "f1e9f8", 
         delay: 300,
         price: "$90/hr",
@@ -40,9 +40,9 @@ const mentors = [
         bio: "While not a female founder, Hassan is a dedicated ally. He offers expert guidance on increasing web traffic, paid advertising, and building a robust online presence.",
     },
     { 
-        name: "Maria Iqbal", 
+        name: "Maria Qureshi", 
         specialty: "Financial Planning and Investment Strategy", 
-        imageText: "Finance", 
+        image: "assets/img/maria.png", 
         imageBg: "fde7f1", 
         delay: 400,
         price: "$120/hr",
@@ -50,9 +50,9 @@ const mentors = [
         bio: "Maria, a former investment banker, provides crucial advice on securing seed funding, financial modeling, and preparing compelling pitch decks for investors.",
     },
     { 
-        name: "Zainab Tariq", 
+        name: "Zoya Ali", 
         specialty: "E-commerce and Supply Chain Management", 
-        imageText: "E-commerce", 
+        image: "assets/img/zoya.png", 
         imageBg: "f1e9f8", 
         delay: 500,
         price: "$65/hr",
@@ -60,9 +60,9 @@ const mentors = [
         bio: "Zainab simplifies the world of online selling. She mentors on platform selection, logistics optimization, and reducing shipping costs for small businesses.",
     },
     { 
-        name: "Sofia Ali", 
+        name: "Maham Faraz", 
         specialty: "HR and Team Building for Startups", 
-        imageText: "HR/Team", 
+        image: "assets/img/Maham.png", 
         imageBg: "fde7f1", 
         delay: 600,
         price: "$80/hr",
@@ -70,9 +70,9 @@ const mentors = [
         bio: "Sofia specializes in building strong company cultures and efficient hiring processes. She guides on compliance, team motivation, and conflict resolution.",
     },
     { 
-        name: "Benish Latif", 
+        name: "Asma Rehnan", 
         specialty: "Tech Product Development and UX Design", 
-        imageText: "Product", 
+        image: "assets/img/asma.png", 
         imageBg: "f1e9f8", 
         delay: 700,
         price: "$110/hr",
@@ -80,9 +80,9 @@ const mentors = [
         bio: "Benish is a veteran Product Manager, offering mentorship on MVP creation, feature prioritization, and user experience (UX) best practices for digital products.",
     },
     { 
-        name: "Uzma Tariq", 
+        name: "Uzma Arham", 
         specialty: "Legal Compliance and Intellectual Property", 
-        imageText: "Legal", 
+        image: "assets/img/uzma.png", 
         imageBg: "fde7f1", 
         delay: 800,
         price: "$150/hr",

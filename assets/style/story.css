@@ -1,0 +1,30 @@
+:root{
+  --lavender:#f1e9f8;
+  --blush:#fde7f1;
+  --deep:#7b4397;
+  --gold:#ffcc70;
+  --muted:#6b6b6b;
+}
+.grad-text{
+  background: linear-gradient(90deg,var(--deep), #9b59b6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.hero-gradient{
+  background: linear-gradient(135deg, var(--lavender) 0%, var(--blush) 55%, #fff 100%);
+}
+.btn-gold{background: var(--gold); color:#3a2f22; font-weight:600; border-radius: 40px;}
+.story-card {
+  border: 1px solid rgba(0,0,0,0.08);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform .3s;
+}
+.story-card:hover{transform: translateY(-5px); box-shadow:0 8px 20px rgba(0,0,0,0.1);}
+.story-img {
+  border-radius: 1rem;
+  transition: transform .3s;
+}
+.story-img:hover {
+    transform: scale(1.02);
+}

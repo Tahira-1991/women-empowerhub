@@ -1,0 +1,48 @@
+   :root{
+      --lavender:#c3aed6;
+      --blush:#e799b2;
+      --blush2:#fde7f1;
+      --deep:#7b4397;
+      --gold:#ffcc70;
+      --gold2:#face7c;
+      --muted:#6b6b6b;
+    }
+    /* Gradient hero */
+    .hero-gradient{
+      background: linear-gradient(135deg, var(--lavender) 0%, var(--blush) 55%, #fff 100%);
+    }
+    /* Accent heading gradient */
+    .grad-text{
+      background: linear-gradient(90deg,var(--deep), #9b59b6);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    /* Soft floating for image */
+    .float-slow { animation: float 5s ease-in-out infinite; }
+    @keyframes float { 0% { transform: translateY(0); } 50% { transform: translateY(-10px); } 100% { transform: translateY(0); } }
+    /* subtle card border */
+    .soft-card { border-radius: 1rem; border: 1px solid rgba(123,67,151,0.06); }
+    /* small utility for gold button */
+    .btn-gold { background: var(--gold); color:#3a2f22; font-weight:600; border-radius: 40px; }
+    .btn-gold2{background: var(--gold); color:#3a2f22; font-weight:600; }
+    .gold-text{-webkit-text-fill-color:var(--gold2) ;}
+    /* Custom gold outline button */
+.btn-outline-gold {
+  color: var(--gold);
+  border: 1.5px solid var(--gold);
+  background-color: transparent;
+  transition: all 0.3s ease;
+}
+
+.btn-outline-gold:hover {
+  background-color: var(--gold);
+  color: #3a2f22; /* Dark readable text on gold */
+}
+
+/* Pill shape fix */
+.btn-gold-rounded-pill {
+  border-radius: 50rem !important;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+  font-weight: 600;
+}
